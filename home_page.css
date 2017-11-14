@@ -1,0 +1,7 @@
+.main_slide{
+   padding-right: 0 
+}
+.main_slide img{
+    width: 100%;
+    padding: 0 !important;
+}

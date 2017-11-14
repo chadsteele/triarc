@@ -1,0 +1,538 @@
+/*
+You can add your own CSS here.
+
+Click the help icon above to learn more.
+*/
+
+/* HOMEPAGE CORRECTIONS - May not be necessary with Visual Composer Implementation - JCH */
+
+hr {
+    border-color: #e3daa4;
+    background-color: #ffffff;
+    width: 90%;
+    margin-bottom: 10px;
+}
+
+#mainNav.navbar-light ul li .sub-menu li {
+    list-style: none;
+    background-color: rgb(85, 85, 85);
+    width: 100%;
+    right: 0 !important;
+    margin-right: 0;
+    text-align:left;
+    font-size:14px;
+}
+
+#mainNav.navbar-light ul li, #mainNav.navbar-light ul li a {
+    color: rgb(255, 255, 255);
+}
+
+#mainNav.navbar-light ul li, #mainNav.navbar-light ul li a:hover {
+    color: #34aef4;
+}
+
+
+/* to support Visual Composer elements */
+
+.sep-a-rator {
+    border: 1px solid #e3daa4;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.home-menu {
+    font-family: 'Raleway', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+.home-menu a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.side-barre {
+    border-left: 10px solid #e3daa4;
+    padding: 0 20px;
+}
+
+.section-heading {
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+
+/*DC Fixes */
+
+input[type=text], input[type=password], input[type=email], input[type=tel], input[type=date], input[type=month], input[type=week], input[type=time], input[type=number], input[type=search], input[type=url], textarea {
+    border-radius:0px;
+    display:inline-block;
+    height:42px;
+    margin:0px;
+    border:0px;
+}
+
+body {
+    margin: 0;
+    font-family: "Raleway",Arial,sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #1d1d1d;
+}
+
+a {
+    color:#1d1d1d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #34aef4;
+    text-decoration: none;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+}
+
+h1 {
+    font-family: 'Cormorant Garamond',Georgia, serif;
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: 'Cormorant Garamond'; Georgia, serif;
+    font-size: 2.5rem:
+    font-weight: 700;
+}
+
+h3	{
+    font-family: 'Ralewy', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight:800;
+    color: #920000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h4 {
+    font-family: 'Raleway',Aria,sans-serif;
+    font-size:12px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+h4 {
+    font-family: 'Raleway',Aria,sans-serif;
+    font-size:20px;
+    font-weight: 400;
+}
+a {
+    color:#1d1d1d;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #34aef4;
+    text-decoration: none;
+}
+
+ul {
+    display: block;
+    list-style-type: none;
+}
+
+.curatedbtn {
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Raleway', sans-serif;
+    border: 0px;
+    color:#ffffff;
+    background-color:#920000;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.browse-border {
+    border-bottom: 1px solid #e3daa4;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#headerInner {
+    background-color: #d9d4ae;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0;
+    border: #d9d4ae solid 1px;
+}
+
+.Explore_input {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding-bottom: 0px;
+}
+
+header .Explore_input {
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-bottom: 0px;
+}
+
+.menu-countries ul{
+    padding:0;
+}
+
+.UsedFilms li {
+    text-align:left;
+}
+
+.UsedFilms li h4 {
+    font-size:11px;
+    background-color: #0a0a0a
+    color: white;
+    padding: 8px;
+    line-height: 1.25;
+}
+.UsedFilms li p {
+    background-color: #1f1f1f;
+    color: white;
+    padding: 8px;
+    line-height: 1.25;
+}
+
+.UsedFilms li {
+    border-bottom: none;
+}
+
+.collect-annotated {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0px;
+    margin-top:0px;
+    margin-bottom: 50px;
+}
+
+.collect-annotated .text {
+    background-color: rgba(0, 0, 0, 0.62);
+    border: 0px;
+    border-radius: 0;
+    width: auto;
+    margin: auto;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.text-white {
+    color:#fff;
+}
+
+.footer a {
+    color:#fff;
+}
+
+.footer a:hover {
+    color: #34aef4;
+}
+
+header .Explore_input input[type="submit"] {
+    background-color: #34aef4;
+}
+
+header.masthead .header-content .header-content-inner .Explore_input input[type="submit"] {
+    background-color: #34aef4
+}
+
+.footer_menu ul li a {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+}
+
+.footer_menu ul li a:hover {
+    text-decoration: none;
+    color: #34aef4;
+}
+
+.footer .subscribe_box {
+    background-color: #000000;
+    padding: 20px;
+    margin: 15px 0px;
+}
+
+.footer-section {
+    margin-top: 50px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.sub-footer {
+    font-size:12px;
+    color:#ffffff;
+}
+
+.sub-footer a {
+    font-size:12px;
+}
+
+.sub-footer a:hover {
+    color: #34aef4;
+}
+
+.form-control {
+    border-radius:0;
+    font-size:14px;
+}
+
+.btn {
+    font-weight: 500;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 0px;
+    font-size:14px;
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color:#34aef4;
+}
+
+.btn-primary:hover {
+    color: #fff;
+    background-color: #288ac2;
+}
+
+.subscribe_box {
+    font-size:14px;
+}
+
+.beige-back {
+    background-color:#eeeee9;
+}
+
+.blog-content {
+    margin: 50px 0;
+}
+
+.blog-title {
+    margin-top:50px;
+}
+
+.clipsLine {
+    background-color: #f6f5e3;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 10px;
+    margin-bottom: 5px;
+}
+
+#mainNav.navbar-light ul li .sub-menu {
+    display: none;
+    background-color: rgb(0, 0, 0, .07);
+    border-radius: 3px;
+}
+
+#mainNav.navbar-light ul li .sub-menu li {
+    list-style: none;
+    background-color: rgb(0, 0, 0, .5);
+}
+
+/*For Mailchimp Form*/
+
+/*For Mailchimp Form*/
+
+button, input {
+    overflow: visible;
+    padding: 8px;
+}
+
+input[type="submit"] {
+    font-size: 12px;
+    height: 42px;
+    border: 1px solid #34aef4;
+    outline: none;
+    background-color: #34aef4;
+    color: #ffffff;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    margin-left: 0px;
+    position: relative;
+    top: 0px;
+    border-radius:0px;
+    transition: all 200ms linear;
+}
+
+input[type=submit]:hover {
+    background-color: #2d93cd;
+    color: #ffffff;
+    border: none;
+    text-decoration: none;
+    border: 1px solid #34aef4;
+}
+
+.subscribe_box h5 {
+    color: white;
+    font-size: 20px; #34aef4;
+    background-color:#
+}
+
+.thumb-container {
+    margin-top:50px;
+}
+
+.page-template-search-results #headerInner {
+    position: static;
+    width: 100%;
+    right: 0;
+    margin-top!important;
+}
+
+#mainNav.fixed-top {
+    border-color: none;
+    background-color: #310000;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-color: #34aef4;
+}
+
+@media only screen and (max-width:520px) {
+    .header-content-inner h1 {
+        font-size:2rem !important;
+    }
+}
+
+header.masthead .header-content .header-content-inner {
+    max-width: 100%;
+
+}
+
+header.masthead .header-content .header-content-inner p {
+    font-size: 16px;
+    max-width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+header.masthead .header-content .header-content-inner .Explore_input {
+    font-family: 'Raleway', Arial, sans-serif;
+}
+
+header.masthead .header-content {
+    position: absolute;
+    top: 50%;
+    padding: 0px;
+}
+
+#mainNav.fixed-top .navbar-brand {
+    color: rgba(255, 255, 255, .7);
+    background-color: #000000;
+    position: absolute;
+    left: 0;
+    padding: 6px 40px;
+    height: 50px;
+    top: 0;
+}
+
+#mainNav.fixed-top {
+    border:0px;
+    background-color: #151515;
+    font-family: 'Raleway',Arial,sans-serif;
+    font-weight: 200;
+    font-size: 14px;
+    height:50px;
+}
+
+#mainNav.fixed-top ul li a, #mainNav.fixed-top ul li a:focus {
+    font-size: 14px;
+    font-weight: 400;
+    color: white;
+}
+
+.footer {
+    background-color: #151515;
+    padding-top:50px;
+    padding-bottom:50px;
+}
+
+section {
+    padding: 0px 0px;
+}
+
+/*Form Fixes*/
+
+.home-search {
+    text-align: center;
+}
+
+@media (max-width: 767px) {
+    .form-inline .form-control {
+        display: inline-block;
+        width: 320px;
+        vertical-align: middle;
+    }
+}
+/*@media (max-width: 767px) {
+  .form-inline .form-group {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+}*/
+
+@media (min-width: 768px) {
+    .form-inline .form-control {
+        width:500px;
+        height:50px;
+        border:0px solid #ffffff;
+    }
+}
+
+.btn-search {
+    color: #fff;
+    border:1px solid #34aef4;
+    background-color:#34aef4;
+    height:50px;
+    width:50px;
+    margin-left:-5px;
+}
+
+.btn-search:hover {
+    color: #fff;
+    border:1px solid #34aef4;
+    background-color: #288ac2;
+    height:50px;
+    width:50px;
+}
+
+#headerInner {
+    background-color: #555;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    padding: 0;
+    border: #555 solid 1px;
+}
+
+body.home header.masthead {
+    margin-bottom:50px;
+}
