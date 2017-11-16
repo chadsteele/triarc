@@ -799,6 +799,10 @@ Click the help icon above to learn more.
             color: #ffad01;
         }
 
+        nav.main-menu button:focus {outline:0;}
+
+        div.nav-search { display:none; align-content: center; position:fixed; top:58px; z-index: 1000 }
+        div.nav-search input, div.nav-search button { height:50px;}
 
 
 
@@ -840,7 +844,7 @@ Click the help icon above to learn more.
 
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="CountriesDropDown" rxxole="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="CountriesDropDown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Countries
                     </a>
@@ -869,21 +873,22 @@ Click the help icon above to learn more.
                     <a class="nav-link" href="/contact/">Contact</a>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="/search-results/">Search <span class="fa fa-search fa-large"
-                                                                             aria-hidden="true"></a>
-                </li>
 
 
             </ul>
-            <!--            <div>
-                            <form class="form-inline ">
-                                <input class="form-control " type="search" placeholder="Explore TRIARC now..." aria-label="Explore TRIARC now...">
-                                <button class="btn btn-search " type="submit"><span class="fa fa-search fa-large" aria-hidden="true"></span></button>
-                            </form>
-                        </div>-->
         </div>
+
     </nav>
+
+    <div class="row justify-content-center">
+        <div class="nav-search">
+            <form class="form-inline" action="/search-results/">
+                <label class="sr-only" for="navSearch">Search</label>
+                <input type="text" class="form-control" name="q" id="navSearch" placeholder="Explore TRIARC now...">
+                <button type="submit" class="btn btn-search"><span class="fa fa-search fa-lg"></span></button>
+            </form>
+        </div>
+    </div>
     <!--
 
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -1584,11 +1589,14 @@ Click the help icon above to learn more.
             $(window).scroll(function (event) {
                 var scroll = $(window).scrollTop();
                 var $nav = $('nav.fixed-top');
+                var $navSearch = $('div.nav-search');
                 // Do something
-                if (scroll <= 100) {
+                if (scroll <= 500) {
                     $nav.addClass('transparent');
+                    $navSearch.hide();
                 } else {
                     $nav.removeClass('transparent');
+                    $navSearch.show();
                 }
             });
         }
