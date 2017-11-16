@@ -9,9 +9,8 @@
 
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="http://visual.rockriverdev3.com/xmlrpc.php">
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" rel="stylesheet"
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
           integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-
     <!-- fonts -->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
           integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
@@ -748,13 +747,13 @@ Click the help icon above to learn more.
             display: none;
             background-color: rgba(0, 0, 0, 0.5);
             border-radius: 3px;
-            position: absolute;
+            position: relative;
             min-width: 200px;
             margin-top: 6px;
             padding: 0;
         }
 
-        nav.main-menu .open .dropdown-menu {
+        nav.main-menu .open .dropdown-menu, nav.main-menu .dropdown-menu.show  {
             display: block;
         }
 
@@ -770,6 +769,11 @@ Click the help icon above to learn more.
 
         nav.main-menu li.nav-item {
             margin: 0 5px 0 5px;
+            text-align: right;
+        }
+
+        nav.main-menu li.nav-item.dropdown {
+            padding-right:10px;
         }
 
         nav.main-menu .dropdown-item {
@@ -796,6 +800,8 @@ Click the help icon above to learn more.
         }
 
 
+
+
     </style>
     <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1507960136378 {
         background: #1b0001 url(http://vc.rockriverdev3.com/wp-content/uploads/2017/10/warrior.jpg?id=89) !important;
@@ -813,6 +819,9 @@ Click the help icon above to learn more.
 <body class="home page-template page-template-templates page-template-homepage page-template-templateshomepage-php page page-id-7 wpb-js-composer js-comp-ver-5.4.2 vc_responsive">
 <div id="page-top">
 
+
+
+
     <nav class="navbar navbar-expand-lg fixed-top main-menu">
 
         <div class="brand-container">
@@ -829,12 +838,13 @@ Click the help icon above to learn more.
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
 
+
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="CountriesDropDown" rxxole="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Countries
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="CountriesDropDown">
                         <a class="dropdown-item" href="#">Abu Dabhi</a>
                         <a class="dropdown-item" href="#">Angola</a>
                         <a class="dropdown-item" href="#">Bahrain</a>
@@ -843,11 +853,11 @@ Click the help icon above to learn more.
                 </li>
 
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                    <a class="nav-link dropdown-toggle" href="#" id="CollectionsDropDown" role="button"
                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Collections
                     </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <div class="dropdown-menu" aria-labelledby="CollectionsDropDown">
                         <a class="dropdown-item" href="#">Modern Arab</a>
                         <a class="dropdown-item" href="#">100 Arabian Nights</a>
                         <a class="dropdown-item" href="#">Super Structures</a>
@@ -874,7 +884,6 @@ Click the help icon above to learn more.
                         </div>-->
         </div>
     </nav>
-
     <!--
 
     <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
@@ -1552,10 +1561,10 @@ Click the help icon above to learn more.
 
 <!-- Bootstrap core JavaScript -->
 <!--Removed so that these are added properly and jquery isn't doubled up - see functions.php - rmmadden 20171015-->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
-        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
-        crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
 
 <!-- Custom scripts for this template -->
 <script xsrc="http://visual.rockriverdev3.com/wp-content/themes/triarc/js/creative.min.js"></script>
@@ -1567,7 +1576,7 @@ Click the help icon above to learn more.
     $(document).ready(function () {
 
         //enable dropdowns
-        $('.dropdown-toggle').dropdown();
+        //$('.dropdown-toggle').dropdown();
 
 
         // change nav on scroll
