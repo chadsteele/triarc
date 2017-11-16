@@ -727,12 +727,12 @@ Click the help icon above to learn more.
             background-color: black;
         }
 
-        nav.main-menu.transparent {
-            background-color: transparent
-        }
-
-        nav.main-menu.transparent div.brand-container {
-            background-color: transparent
+        @media (min-width: 990px) {
+            nav.main-menu.transparent ,
+            nav.main-menu.transparent div.brand-container ,
+            nav.main-menu.transparent div.collapse {
+                background-color: transparent
+            }
         }
 
         nav.main-menu a {
@@ -759,7 +759,7 @@ Click the help icon above to learn more.
 
         nav.main-menu .dropdown-item {
             list-style: none;
-            background-color: rgb(85, 85, 85);
+            background-color: rgba(85, 85, 85, .95);
             width: 100%;
             right: 0 !important;
             margin-right: 0;
@@ -769,12 +769,9 @@ Click the help icon above to learn more.
 
         nav.main-menu li.nav-item {
             margin: 0 5px 0 5px;
-            text-align: right;
+            text-align: left;
         }
 
-        nav.main-menu li.nav-item.dropdown {
-            padding-right:10px;
-        }
 
         nav.main-menu .dropdown-item {
             color: white;
@@ -787,22 +784,34 @@ Click the help icon above to learn more.
         nav.main-menu .dropdown-toggle::after {
             content: "\f107";
             font: normal normal normal 14px/1 FontAwesome;
-            position: absolute;
-            right: 0.5em;
             color: #ffad01;
             top: 1.5em;
             border: 0px; /* undo bootstrap caret */
 
         }
 
-        nav.main-menu .fa {
-            color: #ffad01;
+        nav.main-menu .fa-bars {
+            color: #167ac6;
         }
+
+        nav.main-menu div.collapse { background-color: rgba(85,85,85,.95); }
 
         nav.main-menu button:focus {outline:0;}
 
-        div.nav-search { display:none; align-content: center; position:fixed; top:58px; z-index: 1000 }
-        div.nav-search input, div.nav-search button { height:50px;}
+        div.search-row {
+            background-color: #999;
+            width:100%;
+            position: fixed;
+            top: 58px;
+            z-index: 8;
+            display: none;
+        }
+        div.search-row form {
+            display:table;
+            margin: 0 auto;
+        }
+
+        div.search-row input, div.search-row button { height:50px;}
 
 
 
@@ -880,14 +889,12 @@ Click the help icon above to learn more.
 
     </nav>
 
-    <div class="row justify-content-center">
-        <div class="nav-search">
+    <div class="search-row">
             <form class="form-inline" action="/search-results/">
                 <label class="sr-only" for="navSearch">Search</label>
                 <input type="text" class="form-control" name="q" id="navSearch" placeholder="Explore TRIARC now...">
                 <button type="submit" class="btn btn-search"><span class="fa fa-search fa-lg"></span></button>
             </form>
-        </div>
     </div>
     <!--
 
@@ -1588,8 +1595,8 @@ Click the help icon above to learn more.
         if ($('body').hasClass('home')) {
             $(window).scroll(function (event) {
                 var scroll = $(window).scrollTop();
-                var $nav = $('nav.fixed-top');
-                var $navSearch = $('div.nav-search');
+                var $nav = $('nav.main-menu');
+                var $navSearch = $('div.search-row');
                 // Do something
                 if (scroll <= 500) {
                     $nav.addClass('transparent');
