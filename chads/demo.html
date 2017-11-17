@@ -9,12 +9,14 @@
 
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="http://demo.rockriverdev3.com/xmlrpc.php">
-    <link rel="stylesheet" href="http://demo.rockriverdev3.com/wp-content/themes/triarc/css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+          integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
 
     <!-- fonts -->
-    <link href="http://demo.rockriverdev3.com/wp-content/themes/triarc/genericons/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,700,700i|Raleway:400,400i,600,600i,800,800i,900,900i" rel="stylesheet">
-
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+          integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Cormorant+Garamond:400,400i,500,500i,700,700i|Raleway:400,400i,600,600i,800,800i,900,900i"
+          rel="stylesheet">
 
 
     <!--[if lt IE 9]>
@@ -58,8 +60,8 @@
     <![endif]-->
     <link rel='stylesheet' id='js_composer_front-css'  href='http://demo.rockriverdev3.com/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=5.4.2' type='text/css' media='all' />
     <link rel='stylesheet' id='js_composer_custom_css-css'  href='//demo.rockriverdev3.com/wp-content/uploads/js_composer/custom.css?ver=5.4.2' type='text/css' media='all' />
-    <script type='text/javascript' src='http://demo.rockriverdev3.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
-    <script type='text/javascript' src='http://demo.rockriverdev3.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
+    <xscript type='text/javascript' src='http://demo.rockriverdev3.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+    <xscript type='text/javascript' src='http://demo.rockriverdev3.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.4.1'></script>
     <link rel='https://api.w.org/' href='http://demo.rockriverdev3.com/wp-json/' />
     <link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://demo.rockriverdev3.com/xmlrpc.php?rsd" />
     <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://demo.rockriverdev3.com/wp-includes/wlwmanifest.xml" />
@@ -842,59 +844,208 @@ Click the help icon above to learn more.
         .menu-item {
             line-height: 2.0;
             text-align: left;
-        }		</style>
+        }
+
+
+        /* chad */
+
+        nav.main-menu {
+            background-color: #151515;
+            border-color: rgba(34, 34, 34, .05);
+            font-family: 'Raleway', sans-serif;
+            -webkit-transition: all .2s;
+            -moz-transition: all .2s;
+            transition: all .2s;
+            position: fixed;
+            z-index: 9;
+            width: 100%;
+            padding: 0;
+            line-height: 2.5em;
+        }
+
+        div.brand-container {
+            line-height: 3em;
+            padding-left: 40px;
+            background-color: black;
+        }
+
+        @media (min-width: 990px) {
+            nav.main-menu.transparent ,
+            nav.main-menu.transparent div.brand-container ,
+            nav.main-menu.transparent div.collapse {
+                background-color: transparent
+            }
+        }
+
+        nav.main-menu a {
+            color: white;
+        }
+
+        nav.main-menu a:hover {
+            color: #34aef4;
+        }
+
+        nav.main-menu .dropdown-menu {
+            display: none;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 3px;
+            position: relative;
+            min-width: 200px;
+            margin-top: 6px;
+            padding: 0;
+        }
+
+        nav.main-menu .open .dropdown-menu, nav.main-menu .dropdown-menu.show  {
+            display: block;
+        }
+
+        nav.main-menu .dropdown-item {
+            list-style: none;
+            background-color: rgba(85, 85, 85, .95);
+            width: 100%;
+            right: 0 !important;
+            margin-right: 0;
+            text-align: left;
+            font-size: 14px;
+            line-height:20px;
+        }
+
+        nav.main-menu li.nav-item {
+            margin: 0 5px 0 5px;
+            text-align: left;
+        }
+
+
+        nav.main-menu .dropdown-item {
+            color: white;
+        }
+
+        nav.main-menu .dropdown-item a:hover {
+            color: #34aef4;
+        }
+
+        nav.main-menu .dropdown-toggle::after {
+            content: "\f107";
+            font: normal normal normal 14px/1 FontAwesome;
+            color: #ffad01;
+            top: 1.5em;
+            border: 0px; /* undo bootstrap caret */
+
+        }
+
+        nav.main-menu .fa-bars {
+            color: #167ac6;
+        }
+
+        xnav.main-menu div.collapse { background-color: rgba(85,85,85,.95); }
+
+        nav.main-menu button:focus {outline:0;}
+
+        div.search-row {
+            background-color: #999;
+            width:100%;
+            position: fixed;
+            top: 58px;
+            z-index: 8;
+            display: none;
+        }
+        div.search-row form {
+            display:table;
+            margin: 0 auto;
+        }
+
+        div.search-row input, div.search-row button { height:50px;}
+
+
+
+
+
+    </style>
     <style type="text/css" data-type="vc_shortcodes-custom-css">.vc_custom_1507960136378{background: #1b0001 url(http://vc.rockriverdev3.com/wp-content/uploads/2017/10/warrior.jpg?id=89) !important;background-position: center !important;background-repeat: no-repeat !important;background-size: cover !important;}</style><noscript><style type="text/css"> .wpb_animate_when_almost_visible { opacity: 1; }</style></noscript></head>
 
 <body class="home page-template page-template-templates page-template-homepage page-template-templateshomepage-php page page-id-7 wpb-js-composer js-comp-ver-5.4.2 vc_responsive">
 <div id="page-top">
 
-    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
-        <div class="container">
-            <a class="navbar-brand" href="/"><img src="http://demo.rockriverdev3.com/wp-content/themes/triarc/img/logo.png"></a>
-            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarResponsive">
 
-                <div class="menu-main-navigation-container"><ul id="menu-main-navigation" class="menu navbar-nav ml-auto"><li id="menu-item-423" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-423"><a href="#">Countries</a>
-                    <ul  class="sub-menu">
-                        <li id="menu-item-430" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-430"><a href="http://demo.rockriverdev3.com/collections/abu-dhabi/">Abu Dhabi</a></li>
-                        <li id="menu-item-431" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-431"><a href="http://demo.rockriverdev3.com/collections/angola/">Angola</a></li>
-                        <li id="menu-item-432" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-432"><a href="http://demo.rockriverdev3.com/collections/bahrain/">Bahrain</a></li>
-                        <li id="menu-item-433" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-433"><a href="http://demo.rockriverdev3.com/collections/dubai/">Dubai</a></li>
-                        <li id="menu-item-434" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-434"><a href="http://demo.rockriverdev3.com/collections/egypt/">Egypt</a></li>
-                        <li id="menu-item-435" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-435"><a href="http://demo.rockriverdev3.com/collections/europe/">Europe</a></li>
-                        <li id="menu-item-436" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-436"><a href="http://demo.rockriverdev3.com/collections/india/">India</a></li>
-                        <li id="menu-item-437" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-437"><a href="http://demo.rockriverdev3.com/collections/iran/">Iran</a></li>
-                        <li id="menu-item-438" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-438"><a href="http://demo.rockriverdev3.com/collections/iraq/">Iraq</a></li>
-                        <li id="menu-item-440" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-440"><a href="http://demo.rockriverdev3.com/collections/jordan/">Jordan</a></li>
-                        <li id="menu-item-441" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-441"><a href="http://demo.rockriverdev3.com/collections/kuwait/">Kuwait</a></li>
-                        <li id="menu-item-442" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-442"><a href="http://demo.rockriverdev3.com/collections/lebanon/">Lebanon</a></li>
-                        <li id="menu-item-443" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-443"><a href="http://demo.rockriverdev3.com/collections/morocco/">Morocco</a></li>
-                        <li id="menu-item-444" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-444"><a href="http://demo.rockriverdev3.com/collections/palestine/">Palestine</a></li>
-                        <li id="menu-item-445" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-445"><a href="http://demo.rockriverdev3.com/collections/qatar/">Qatar</a></li>
-                        <li id="menu-item-446" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-446"><a href="http://demo.rockriverdev3.com/collections/saudi-arabia/">Saudi Arabia</a></li>
-                        <li id="menu-item-447" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-447"><a href="http://demo.rockriverdev3.com/collections/syria/">Syria</a></li>
-                        <li id="menu-item-448" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-448"><a href="http://demo.rockriverdev3.com/collections/thailand/">Thailand</a></li>
-                        <li id="menu-item-450" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-450"><a href="http://demo.rockriverdev3.com/collections/turkey/">Turkey</a></li>
-                    </ul>
-                </li>
-                    <li id="menu-item-366" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-366"><a href="#">Collections</a>
-                        <ul  class="sub-menu">
-                            <li id="menu-item-426" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-426"><a href="http://demo.rockriverdev3.com/collections/modern-arab/">Modern Arab</a></li>
-                            <li id="menu-item-424" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-424"><a href="http://demo.rockriverdev3.com/collections/101-arabian-nights-and-days/">101 Arabian Nights… and Days</a></li>
-                            <li id="menu-item-427" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-427"><a href="http://demo.rockriverdev3.com/collections/super-structures-babylon-to-dubai/">Super Structures: Babylon to Dubai</a></li>
-                            <li id="menu-item-425" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-425"><a href="http://demo.rockriverdev3.com/collections/islamic-design/">Islamic Design</a></li>
-                            <li id="menu-item-428" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-428"><a href="http://demo.rockriverdev3.com/collections/the-cedars-of-god/">The Cedars of God</a></li>
-                            <li id="menu-item-429" class="menu-item menu-item-type-post_type menu-item-object-collection menu-item-429"><a href="http://demo.rockriverdev3.com/collections/treasure-trove/">Treasure Trove</a></li>
-                        </ul>
-                    </li>
-                    <li id="menu-item-460" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-460"><a href="http://demo.rockriverdev3.com/contact/">Contact</a></li>
-                </ul></div>
 
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top main-menu">
+
+        <div class="brand-container">
+            <a class="navbar-brand" href="/"><img
+                    src="http://visual.rockriverdev3.com/wp-content/themes/triarc/img/logo.png"></a>
         </div>
+
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="fa fa-bars"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="CountriesDropDown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Countries
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="CountriesDropDown">
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/abu-dhabi/">Abu Dhabi</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/angola/">Angola</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/bahrain/">Bahrain</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/dubai/">Dubai</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/egypt/">Egypt</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/europe/">Europe</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/india/">India</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/iran/">Iran</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/iraq/">Iraq</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/jordan/">Jordan</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/kuwait/">Kuwait</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/lebanon/">Lebanon</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/morocco/">Morocco</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/palestine/">Palestine</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/qatar/">Qatar</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/saudi-arabia/">Saudi Arabia</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/syria/">Syria</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/thailand/">Thailand</a>
+                       <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/turkey/">Turkey</a>
+                    </div>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="CollectionsDropDown" role="button"
+                       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Collections
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="CollectionsDropDown">
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/modern-arab/">Modern Arab</a>
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/101-arabian-nights-and-days/">101 Arabian Nights… and Days</a>
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/super-structures-babylon-to-dubai/">Super Structures: Babylon to Dubai</a>
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/islamic-design/">Islamic Design</a>
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/the-cedars-of-god/">The Cedars of God</a>
+                        <a class="dropdown-item" href="http://demo.rockriverdev3.com/collections/treasure-trove/">Treasure Trove</a>
+                    </div>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact/">Contact</a>
+                </li>
+
+
+
+            </ul>
+        </div>
+
     </nav>
+
+    <div class="search-row">
+        <form class="form-inline" action="/search-results/">
+            <label class="sr-only" for="navSearch">Search</label>
+            <input type="text" class="form-control" name="q" id="navSearch" placeholder="Explore TRIARC now...">
+            <button type="submit" class="btn btn-search"><span class="fa fa-search fa-lg"></span></button>
+        </form>
+    </div>
+
+
 </div>
 <!-- .sidebar -->
 
@@ -1232,75 +1383,55 @@ Click the help icon above to learn more.
 </section>
 
 <!-- Bootstrap core JavaScript --><!--Removed so that these are added properly and jquery isn't doubled up - see functions.php - rmmadden 20171015-->
-<script src="http://demo.rockriverdev3.com/wp-content/themes/triarc/js/jquery.min.js"></script>
-<script src="http://demo.rockriverdev3.com/wp-content/themes/triarc/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
 
 <!-- Custom scripts for this template -->
-<script src="http://demo.rockriverdev3.com/wp-content/themes/triarc/js/creative.min.js"></script>
+<script xsrc="http://demo.rockriverdev3.com/wp-content/themes/triarc/js/creative.min.js"></script>
 
 </body>
 
 <script type="text/javascript">
 
+    $(document).ready(function () {
 
-    $( document ).ready(function() {
+        //enable dropdowns
+        //$('.dropdown-toggle').dropdown();
+
+
+        // change nav on scroll
         if ($('body').hasClass('home')) {
             $(window).scroll(function (event) {
                 var scroll = $(window).scrollTop();
+                var $nav = $('nav.main-menu');
+                var $navSearch = $('div.search-row');
                 // Do something
-                if (scroll >= 100) {
-                    $('.home #mainNav').addClass('fixed-top');
-                }else{
-                    $('.home #mainNav').removeClass('fixed-top');
+                if (scroll <= 500) {
+                    $nav.addClass('transparent');
+                    $navSearch.hide();
+                } else {
+                    $nav.removeClass('transparent');
+                    $navSearch.show();
                 }
             });
-        }else{
-            $('#mainNav').addClass('fixed-top');
         }
+        ;
+
+        //make home menu transparent on initial load
+        $(window).trigger('scroll');
+
+        //add hover to toggles
+        $('.navlink.dropdown-toggle').on('mouseover', function (event) {
+            $(this).trigger('click');
+        });
 
     });
 
 
-
-
-
 </script>
 
-<script type="text/javascript">(function() {function addEventListener(element,event,handler) {
-    if(element.addEventListener) {
-        element.addEventListener(event,handler, false);
-    } else if(element.attachEvent){
-        element.attachEvent('on'+event,handler);
-    }
-}function maybePrefixUrlField() {
-    if(this.value.trim() !== '' && this.value.indexOf('http') !== 0) {
-        this.value = "http://" + this.value;
-    }
-}
-
-    var urlFields = document.querySelectorAll('.mc4wp-form input[type="url"]');
-    if( urlFields && urlFields.length > 0 ) {
-        for( var j=0; j < urlFields.length; j++ ) {
-            addEventListener(urlFields[j],'blur',maybePrefixUrlField);
-        }
-    }/* test if browser supports date fields */
-    var testInput = document.createElement('input');
-    testInput.setAttribute('type', 'date');
-    if( testInput.type !== 'date') {
-
-        /* add placeholder & pattern to all date fields */
-        var dateFields = document.querySelectorAll('.mc4wp-form input[type="date"]');
-        for(var i=0; i<dateFields.length; i++) {
-            if(!dateFields[i].placeholder) {
-                dateFields[i].placeholder = 'YYYY-MM-DD';
-            }
-            if(!dateFields[i].pattern) {
-                dateFields[i].pattern = '[0-9]{4}-(0[1-9]|1[012])-(0[1-9]|1[0-9]|2[0-9]|3[01])';
-            }
-        }
-    }
-
-})();</script><link rel='stylesheet' id='custom-style-1-css'  href='http://demo.rockriverdev3.com/wp-content/plugins/instagram-theatre/jquery-instagram-theatre/jquery.fancybox-1.3.4.css?ver=4.8.3' type='text/css' media='all' />
+<link rel='stylesheet' id='custom-style-1-css'  href='http://demo.rockriverdev3.com/wp-content/plugins/instagram-theatre/jquery-instagram-theatre/jquery.fancybox-1.3.4.css?ver=4.8.3' type='text/css' media='all' />
 <link rel='stylesheet' id='custom-style-2-css'  href='http://demo.rockriverdev3.com/wp-content/plugins/instagram-theatre/code/style.css?ver=4.8.3' type='text/css' media='all' />
 <script type='text/javascript' src='http://demo.rockriverdev3.com/wp-content/themes/triarc/js/spin.min.js?ver=20171010'></script>
 <script type='text/javascript' src='http://demo.rockriverdev3.com/wp-content/themes/triarc/js/jquery.lazyload.min.js?ver=20171010'></script>
