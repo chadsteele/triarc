@@ -1919,7 +1919,7 @@ Click the help icon above to learn more.
         $body.on('mouseleave', 'nav.main-menu ul.sub-menu', function (event) {
             event.stopPropagation();
             var $this = $(this);
-            $('nav.main-menu ul.sub-menu').hide();
+            $this.hide();
             return false;
         });
 

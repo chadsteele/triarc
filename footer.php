@@ -167,16 +167,44 @@
 
 
   <script type="text/javascript">
+
    $(document).ready(function () {
 
+        var $body = $('body'), $window = $(window);
+
         //enable dropdowns
-        //$('.dropdown-toggle').dropdown();
+        $body.on('click', 'nav.main-menu li.menu-item-has-children a', function (event) {
+            event.stopPropagation();
+            var $this = $(this).next();
+            $('nav.main-menu ul.sub-menu').not($this).hide();
+            $this.toggle();
+            return false;
+        });
+
+        $body.on('mouseenter', 'nav.main-menu li.menu-item-has-children', function (event) {
+            event.stopPropagation();
+            var $this = $(this).find('ul.sub-menu');
+            $('nav.main-menu ul.sub-menu').not($this).hide();
+            $this.show();
+            return false;
+        });
+
+        $body.on('mouseleave', 'nav.main-menu ul.sub-menu', function (event) {
+            event.stopPropagation();
+            var $this = $(this);
+            $this.hide();
+            return false;
+        });
 
 
-        // change nav on scroll
-        if ($('body').hasClass('home')) {
-            $(window).scroll(function (event) {
-                var scroll = $(window).scrollTop();
+        $body.on('click', 'nav.main-menu button.navbar-toggler', function (event) {
+            $('nav.main-menu div.menu-main-navigation-container').toggle();
+        });
+
+        // change nav on scroll on home screen only
+        if ($body.hasClass('home')) {
+            $window.scroll(function (event) {
+                var scroll = $window.scrollTop();
                 var $nav = $('nav.main-menu');
                 var $navSearch = $('div.search-row');
                 // Do something
@@ -188,16 +216,11 @@
                     $navSearch.show();
                 }
             });
+
+            //make home menu transparent on initial load
+            $(window).trigger('scroll');
         }
-        ;
 
-        //make home menu transparent on initial load
-        $(window).trigger('scroll');
-
-        //add hover to toggles
-        $('.navlink.dropdown-toggle').on('mouseover', function (event) {
-            $(this).trigger('click');
-        });
 
     });
 
