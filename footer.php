@@ -173,7 +173,7 @@
         var $body = $('body'), $window = $(window);
 
         //enable dropdowns
-        $body.on('click', 'nav.main-menu li.menu-item-has-children a', function (event) {
+        $body.on('click', 'nav.main-menu li.menu-item-has-children > a', function (event) {
             event.stopPropagation();
             var $this = $(this).next();
             $('nav.main-menu ul.sub-menu').not($this).hide();
